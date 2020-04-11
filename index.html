@@ -4,11 +4,49 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SameSite Test</title>
+        <style>
+            h1 {
+                display: block;
+                margin-bottom: 30px;
+            }
+            div {
+                display: flex;
+                justify-content: space-between;
+                max-width: 800px;
+                width: 100%;
+            }
+            button,
+            a {
+                display: block;
+                background: black;
+                color: #fff;
+                font-size: 20px;
+                padding: 10px 20px;
+                box-sizing: border-box;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            button:hover,
+            a:hover {
+                opacity: 0.8;
+            }
+        </style>
     </head>
     <body>
         <h1>SameSite Cookie</h1>
-        <button type="button" class="js-cookieMake">Cookie Maker</button>
-        <button type="button" class="js-cookkeConfirm">Cookie Confirm</button>
+        <div>
+            <button type="button" class="js-cookieMake">Cookie Maker</button>
+            <button type="button" class="js-cookkeConfirm">Cookie Confirm</button>
+
+            <!-- form태그로 요청 lax가 전송됨 -->
+            <form action="http://yeongmin.com:10004/confirm" method="GET">
+                <button>Lax를 전송하자</button>
+            </form>
+
+            <!-- a 태그로 요청 lax가 전송됨 -->
+            <a href="http://yeongmin.com:10004/confirm">Lax를 전송하자</a>
+        </div>
+
         <script>
             function request(uri) {
                 fetch(uri, {

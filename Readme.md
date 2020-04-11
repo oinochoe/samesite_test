@@ -37,3 +37,10 @@ res.append('Set-Cookie', `cookie3=Strict; SameSite=Strict;`);
 ## Same Site Lax
 
 - 서드파티에서 SameSite Lax는 몇 가지 경우에서만 가능하다.
+- form의 get 방식과 a 태그의 경우 Lax가 전송된다.
+
+## Result
+
+- 결론적으로 Lax가 default가 됨에 따라 Lax 서드 파티가 전송되지 않도록 주의하는 방법은 다음과 같다. 
+- `button type button으로 실행`
+- `iframe으로 라우트 방지`
