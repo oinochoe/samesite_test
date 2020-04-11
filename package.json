@@ -1,0 +1,24 @@
+{
+  "name": "samesite_test",
+  "version": "1.0.0",
+  "description": "* $ sudo vi /etc/hosts * 아이피 주소를 넣고 구분은 탭(tab)으로 해야 한다. * $ dscacheutil -flushcache (dns 캐시 재부팅)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oinochoe/samesite_test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oinochoe/samesite_test/issues"
+  },
+  "homepage": "https://github.com/oinochoe/samesite_test#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security"
+  }
+}

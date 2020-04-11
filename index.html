@@ -3,7 +3,34 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>SameSite Test</title>
     </head>
-    <body></body>
+    <body>
+        <h1>SameSite Cookie 체크</h1>
+        <button type="button" class="js-cookieMake">Cookie Maker</button>
+        <button type="button" class="js-cookkeConfirm">Cookie Confirm</button>
+        <script>
+            function request(uri) {
+                fetch(uri, {
+                    method: 'GET',
+                    headers: {
+                        'Content-type': 'application/json;charset=UTF-8',
+                    },
+                    credentials: 'include',
+                })
+                    .then((res) => res.json())
+                    .then((result) => console.log(result));
+            }
+
+            // cookie maker
+            document.querySelector('.js-cookieMake').addEventListener('click', () => {
+                request('http://yeongmin.com:10004/make');
+            });
+
+            // cookie confirm
+            document.querySelector('.js-cookkeConfirm').addEventListener('click', () => {
+                request('http://yeongmin.com:10004/confirm');
+            });
+        </script>
+    </body>
 </html>
