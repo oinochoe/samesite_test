@@ -41,6 +41,7 @@ res.append('Set-Cookie', `cookie3=Strict; SameSite=Strict;`);
 
 ## Result
 
-- 결론적으로 Lax가 default가 됨에 따라 Lax 서드 파티가 전송되지 않도록 주의하는 방법은 다음과 같다. 
+- 서드파티에서 당연스럽게 구워지던 쿠키가 구워지지 않는 경우가 생긴다.
+- 결론적으로 Lax가 default가 됨에 따라 Lax가 전송되지 않는 상황은 다음과 같다. 
 - `button type button으로 실행`
 - `iframe으로 라우트 방지`
