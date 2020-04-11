@@ -28,3 +28,12 @@ res.append('Set-Cookie', `cookie1=default_value; SameSite=none;`);
 res.append('Set-Cookie', `cookie2=Lax; SameSite=Lax;`);
 res.append('Set-Cookie', `cookie3=Strict; SameSite=Strict;`);
 ```
+
+## Sub 도메인과 Third 도메인 확인
+
+-   network에서 request 정보를 확인해보면 sub 도메인은 3개 다 요청하는 반면
+-   Third 도메인은 `cookie1=default_value` 만 전송하는 것을 확인할 수 있다.
+
+## Same Site Lax
+
+-   서드파티에서 SameSite Lax는 몇 가지 경우에서만 가능하다.
