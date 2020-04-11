@@ -22,3 +22,9 @@
 -   여러 경우 이렇게 third.com에서 하고싶은도메인.com으로 자동으로 전송되는 공격에 의해서 보안의 위협이 있다.
 
 ## Same Site 설정
+
+```javascript
+res.append('Set-Cookie', `cookie1=default_value; sameSite=None;`);
+res.append('Set-Cookie', `cookie2=Lax; sameSite=Lax;`);
+res.append('Set-Cookie', `cookie3=Strict; sameSite=Strict;`);
+```
