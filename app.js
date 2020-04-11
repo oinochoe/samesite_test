@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 app.get('/make', (req, res) => {
     console.log('route : make cookie');
 
-    res.append('Set-Cookie', `cookie1=default_value; SameSite=None;`);
+    res.append('Set-Cookie', `cookie1=default_value; SameSite=none;`);
     res.append('Set-Cookie', `cookie2=Lax; SameSite=Lax;`);
     res.append('Set-Cookie', `cookie3=Strict; SameSite=Strict;`);
 

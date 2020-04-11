@@ -24,7 +24,7 @@
 ## Same Site 설정
 
 ```javascript
-res.append('Set-Cookie', `cookie1=default_value; SameSite=None;`);
+res.append('Set-Cookie', `cookie1=default_value; SameSite=none;`);
 res.append('Set-Cookie', `cookie2=Lax; SameSite=Lax;`);
 res.append('Set-Cookie', `cookie3=Strict; SameSite=Strict;`);
 ```
