@@ -1,8 +1,8 @@
 # host 설정
 
--   \$ sudo vi /etc/hosts
--   아이피 주소를 넣고 구분은 탭(tab)으로 해야 한다.
--   \$ dscacheutil -flushcache (dns 캐시 재부팅)
+- \$ sudo vi /etc/hosts
+- 아이피 주소를 넣고 구분은 탭(tab)으로 해야 한다.
+- \$ dscacheutil -flushcache (dns 캐시 재부팅)
 
 ```js
 // hosts
@@ -18,8 +18,8 @@
 3. third.com 에서 cookieConfirm을 눌러 하고싶은도메인.com 에 쿠키 서드파티 인젝션을 시도
 4. 쿠키가 생성된 것을 확인할 수 있다.(네트워크 탭에서 request 헤더 탭을 보면 확인 가능)
 
--   이렇게 사용자가 모르는 정보가 알아서 전송되는 것을 CSRF 공격으로 간주할 수 있다.
--   여러 경우 이렇게 third.com에서 하고싶은도메인.com으로 자동으로 전송되는 공격에 의해서 보안의 위협이 있다.
+- 이렇게 사용자가 모르는 정보가 알아서 전송되는 것을 CSRF 공격으로 간주할 수 있다.
+- 여러 경우 이렇게 third.com에서 하고싶은도메인.com으로 자동으로 전송되는 공격에 의해서 보안의 위협이 있다.
 
 ## Same Site 설정
 
@@ -31,9 +31,9 @@ res.append('Set-Cookie', `cookie3=Strict; SameSite=Strict;`);
 
 ## Sub 도메인과 Third 도메인 확인
 
--   network에서 request 정보를 확인해보면 sub 도메인은 3개 다 요청하는 반면
--   Third 도메인은 `cookie1=default_value` 만 전송하는 것을 확인할 수 있다.
+- network에서 request 정보를 확인해보면 sub 도메인은 3개 다 요청하는 반면
+- Third 도메인은 `cookie1=default_value` 만 전송하는 것을 확인할 수 있다.
 
 ## Same Site Lax
 
--   서드파티에서 SameSite Lax는 몇 가지 경우에서만 가능하다.
+- 서드파티에서 SameSite Lax는 몇 가지 경우에서만 가능하다.
